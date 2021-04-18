@@ -27,28 +27,46 @@
 
 <main class="main flex-shrink-0">
     <div class="container">
-        <div class="main__post-box d-flex flex-column justify-content-between">
-            <div class="main__post p-5 rounded-lg m-3">
-                <h1 class="display-4">Заголовок поста</h1>
-                <hr class="my-4">
-                <p>Краткое описание поста</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">подробнее</a>
-            </div>
 
-            <div class="main__post p-5 rounded-lg m-3">
-                <h1 class="display-4">Заголовок поста</h1>
-                <hr class="my-4">
-                <p>Краткое описание поста</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">подробнее</a>
-            </div>
-
-            <div class="main__post p-5 rounded-lg m-3">
-                <h1 class="display-4">Заголовок поста</h1>
-                <hr class="my-4">
-                <p>Краткое описание поста</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">подробнее</a>
+        <div class="card mb-3" style="max-width: 1150px;">
+            <div class="row g-0">
+                <div class="col-md-4 profile__image" style="background-image: url(https://images.unsplash.com/photo-1593352216840-1aee13f45818?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1834&q=80)">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Профиль</h5>
+                        <table class="table">
+                            <tbody>
+                            <tr>
+                                <th scope="row">Имя</th>
+                                <td>Артем</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Город</th>
+                                <td>Харьков</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email</th>
+                                <td>a.chepak91@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Пароль</th>
+                                <td>password</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">О себе</th>
+                                <td>
+                                    Умеет: упражнениями представление возникают счастливой ни из возникают презирает избегал такого предпочел возникает такие eсли упражнениями превратное или отвергает, предпочел отвергает обстоятельства. И, справедливости, никого действительно избегал порицающих, если людей вы, чтобы некое неприятностей боль но мог, я приносят умеет кто когда. Когда то открывший само умеет этот то, жизни приносило то простейшим страдание действительно собой избегал eсли как это.
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Изменить профиль</a>
             </div>
         </div>
+
     </div>
 </main>
 

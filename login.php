@@ -27,28 +27,17 @@
 
 <main class="main flex-shrink-0">
     <div class="container">
-        <div class="main__post-box d-flex flex-column justify-content-between">
-            <div class="main__post p-5 rounded-lg m-3">
-                <h1 class="display-4">Заголовок поста</h1>
-                <hr class="my-4">
-                <p>Краткое описание поста</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">подробнее</a>
+        <form class="main__form">
+            <div class="mb-3">
+                <label for="email" class="form-label">Введите Email</label>
+                <input type="email" class="form-control" id="email">
             </div>
-
-            <div class="main__post p-5 rounded-lg m-3">
-                <h1 class="display-4">Заголовок поста</h1>
-                <hr class="my-4">
-                <p>Краткое описание поста</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">подробнее</a>
+            <div class="mb-3">
+                <label for="password" class="form-label">Введите пароль</label>
+                <input type="password" class="form-control" id="password">
             </div>
-
-            <div class="main__post p-5 rounded-lg m-3">
-                <h1 class="display-4">Заголовок поста</h1>
-                <hr class="my-4">
-                <p>Краткое описание поста</p>
-                <a class="btn btn-primary btn-lg" href="#" role="button">подробнее</a>
-            </div>
-        </div>
+            <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
     </div>
 </main>
 
