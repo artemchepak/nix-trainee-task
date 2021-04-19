@@ -1,6 +1,8 @@
 <?php
 
-$content = "components/login-form.php";
+function content(){
+    return include_once "components/login-form.php";
+}
 
 include_once "components/header.php";
 

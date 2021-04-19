@@ -1,6 +1,8 @@
 <?php
 
-$content = "components/profile.php";
+function content(){
+    return include_once "components/profile.php";
+}
 
 include_once "components/header.php";
 
