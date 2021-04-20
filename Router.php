@@ -3,7 +3,6 @@
 
 namespace app;
 
-
 use app\models\Posts;
 
 class Router

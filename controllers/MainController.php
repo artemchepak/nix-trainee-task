@@ -7,9 +7,10 @@ use app\Router;
 
 class MainController
 {
+
     public function index(Router $router)
     {
-        $posts = $router->db->allPosts();
+        $posts = $router->db->getPosts();
         $router->renderView('\index', [
             'posts' => $posts
         ]);
