@@ -1,7 +1,3 @@
-button+button{
-    margin-left: 20px;
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -16,6 +12,11 @@ a {
 .header, .footer, .main__post{
     background-color: #eeeeee;
 }
+
+.header__btn+.header__btn{
+    margin-left: 20px;
+}
+
 .main__posts, .main__box{
     min-height: 100%;
 }

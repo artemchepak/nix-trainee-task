@@ -1,0 +1,16 @@
+{
+    "name": "artem/nix-trainee-task",
+    "description": "nix trainee task",
+    "authors": [
+        {
+            "name": "Artem Chepak",
+            "email": "a.chepak91@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\" : "./"
+        }
+    }
+}
