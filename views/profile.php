@@ -1,7 +1,14 @@
+<?php
+use app\models\Authorization;
+?>
 <div class="card mb-3">
     <div class="row g-0">
-        <div class="col-md-4 profile__image" style="background-image: url(https://cdn.business2community.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png)">
+        <?php if(is_null($userData['image'])): ?>
+        <div class="col-md-4 profile__image" style="background-image: url(https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg)">
         </div>
+        <?php else: ?>
+            put image from DB
+        <?php endif; ?>
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">Профиль</h5>
@@ -9,24 +16,32 @@
                     <tbody>
                     <tr>
                         <th scope="row">Имя</th>
-                        <td>Артем</td>
+                        <td>
+                            <?php echo $userData['name'] ?>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Город</th>
-                        <td>Харьков</td>
+                        <td>
+                            <?php echo $userData['city'] ?>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Email</th>
-                        <td>a.chepak91@gmail.com</td>
+                        <td>
+                            <?php echo $userData['email'] ?>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">Пароль</th>
-                        <td>password</td>
+                        <td>
+                            <?php echo $userData['password'] ?>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">О себе</th>
                         <td>
-                            Умеет: упражнениями представление возникают счастливой ни из возникают презирает избегал такого предпочел возникает такие eсли упражнениями превратное или отвергает, предпочел отвергает обстоятельства. И, справедливости, никого действительно избегал порицающих, если людей вы, чтобы некое неприятностей боль но мог, я приносят умеет кто когда. Когда то открывший само умеет этот то, жизни приносило то простейшим страдание действительно собой избегал eсли как это.
+                            <?php echo $userData['info'] ?>
                         </td>
                     </tr>
                     </tbody>

@@ -4,13 +4,15 @@ namespace app\controllers;
 
 
 use app\Router;
+use PDO;
 
 class MainController
 {
+    public Registration $reg;
 
     public function index(Router $router)
     {
-        $posts = $router->db->getPosts();
+        $posts = $router->posts->getPosts();
         $router->renderView('\index', [
             'posts' => $posts
         ]);
@@ -18,18 +20,40 @@ class MainController
 
     public function login(Router $router)
     {
-        $router->renderView('\login');
-    }
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+            $router->auth->userAuthotization();
 
-    public function registration(Router $router)
-    {
-        $router->renderView('\registration');
+
+        }
+
+        $router->renderView('\login');
     }
 
     public function profile(Router $router)
     {
-        $router->renderView('\profile');
+        $profile = $router->profile->viewProfile();
+        $router->renderView('\profile', [
+            'userData' => $profile
+        ]);
+    }
+
+    public function registration(Router $router)
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+                $router->reg->userRegistration();
+        }
+
+        $router->renderView('\registration');
     }
 
 
+
+    public function registrationSuccess(Router $router)
+    {
+        $router->renderView('\registrationSuccess');
+    }
+
+    public function clear(Router $router){
+        $router->auth->clearCookie();
+    }
 }

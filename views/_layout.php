@@ -19,9 +19,16 @@
         <div class="d-flex justify-content-between align-items-center">
             <a href="\" class="header__logo h3">NIX Trainee Task</a>
             <div class="d-flex justify-content-end align-items-center">
-                <a href="\login" class="btn btn-outline-primary header__btn">Логин</a>
-                <a href="\registration" class="btn btn-primary header__btn">Регистрация</a>
-                <a href="\profile" class="btn btn-secondary header__btn">Профиль</a>
+                <?php
+                    if(isset($_COOKIE['user'])):
+                ?>
+                        <h5 class="header__btn">Привет <?php echo $_COOKIE["user"]; ?></h5>
+                        <a href="\profile" class="btn btn-success header__btn">Профиль</a>
+                        <a href="\clear" class="btn btn-outline-danger header__btn">Выйти</a>
+                <?php else: ?>
+                        <a href="\login" class="btn btn-outline-primary header__btn">Логин</a>
+                        <a href="\registration" class="btn btn-primary header__btn">Регистрация</a>
+                    <?php endif; ?>
             </div>
         </div>
     </div>

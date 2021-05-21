@@ -3,17 +3,26 @@
 
 namespace app;
 
+use app\models\Authorization;
 use app\models\Posts;
+use app\models\Profile;
+use app\models\Registration;
 
 class Router
 {
     public array $getRoutes = [];
     public array $postRoutes = [];
-    public Posts $db;
+    public Posts $posts;
+    public Registration $reg;
+    public Authorization $auth;
+    public Profile $profile;
 
     public function __construct()
     {
-        $this->db = new Posts();
+        $this->posts = new Posts();
+        $this->reg = new Registration();
+        $this->auth = new Authorization();
+        $this->profile = new Profile();
     }
 
     public function get($url, $fn)
@@ -41,7 +50,7 @@ class Router
             $controller = new $fn[0];
             call_user_func(array($controller, $fn[1]), $this);
         } else {
-            echo "Страница не найдена";
+
         }
     }
 
