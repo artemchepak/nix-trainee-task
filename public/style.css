@@ -1,0 +1,45 @@
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.container{
+    padding: 10px;
+}
+
+.header, .footer, .main__post{
+    background-color: #eeeeee;
+}
+
+.header__btn+.header__btn{
+    margin-left: 20px;
+}
+
+.main__posts, .main__box{
+    min-height: 100%;
+}
+.main__box{
+    background-color: red;
+}
+
+.main__form{
+    width: 500px;
+    margin: 50px auto 0;
+}
+
+.footer svg{
+    width: 40px;
+    height: 40px;
+    fill: #222222;
+    transition: all 0.3s;
+}
+
+.profile__image{
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 15px 0 0 15px;
+}
