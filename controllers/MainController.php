@@ -2,7 +2,6 @@
 
 namespace app\controllers;
 
-
 use app\Router;
 use PDO;
 
@@ -20,10 +19,8 @@ class MainController
 
     public function login(Router $router)
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $router->auth->userAuthotization();
-
-
         }
 
         $router->renderView('\login');
@@ -37,15 +34,25 @@ class MainController
         ]);
     }
 
+    public function profileUpdate(Router $router)
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $router->profile->updateProfile();
+        }
+        $profile = $router->profile->viewProfile();
+        $router->renderView('\profileUpdate', [
+            'userData' => $profile
+        ]);
+    }
+
     public function registration(Router $router)
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-                $router->reg->userRegistration();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $router->reg->userRegistration();
         }
 
         $router->renderView('\registration');
     }
-
 
 
     public function registrationSuccess(Router $router)
@@ -53,7 +60,8 @@ class MainController
         $router->renderView('\registrationSuccess');
     }
 
-    public function clear(Router $router){
+    public function clear(Router $router)
+    {
         $router->auth->clearCookie();
     }
 }

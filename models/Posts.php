@@ -5,6 +5,7 @@ namespace app\models;
 
 use PDO;
 use app\ActiveRecord;
+
 class Posts extends ActiveRecord
 {
     private $table = 'posts';
@@ -18,5 +19,4 @@ class Posts extends ActiveRecord
         $result = $posts->executeQuery($queryPosts);
         return $result->fetchAll(PDO::FETCH_ASSOC);
     }
-
 }

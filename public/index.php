@@ -16,6 +16,8 @@ $router->get('/registrationSuccess', [MainController::class, 'registrationSucces
 $router->get('/registration', [MainController::class, 'registration']);
 $router->post('/registration', [MainController::class, 'registration']);
 $router->get('/profile', [MainController::class, 'profile']);
+$router->get('/profileUpdate', [MainController::class, 'profileUpdate']);
+$router->post('/profileUpdate', [MainController::class, 'profileUpdate']);
 $router->get('/clear', [MainController::class, 'clear']);
 
 $router->resolve();

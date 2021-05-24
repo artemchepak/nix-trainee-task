@@ -1,6 +1,5 @@
 <?php
 
-
 namespace app;
 
 use app\models\Authorization;
@@ -50,7 +49,6 @@ class Router
             $controller = new $fn[0];
             call_user_func(array($controller, $fn[1]), $this);
         } else {
-
         }
     }
 

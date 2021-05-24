@@ -5,11 +5,13 @@ namespace app\models;
 
 use PDO;
 use app\ActiveRecord;
+
 class Authorization extends ActiveRecord
 {
     private $table = 'users';
 
-    public function userAuthotization(){
+    public function userAuthotization()
+    {
         $login = $_POST['login'];
         $password = $_POST['password'];
 
@@ -27,10 +29,10 @@ class Authorization extends ActiveRecord
         header('Location: /');
     }
 
-    public function clearCookie(){
-        setcookie('user',"", time() - 86400);
-        setcookie('id',"", time() - 86400);
+    public function clearCookie()
+    {
+        setcookie('user', "", time() - 86400);
+        setcookie('id', "", time() - 86400);
         header('Location: /');
     }
-
 }
